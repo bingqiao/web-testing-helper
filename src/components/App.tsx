@@ -1,14 +1,25 @@
 import React from 'react';
 function App() {
+    const getDateTime = () => {
+        const datetime = new Date();
+        return (
+            <div>
+                <div>{datetime.toLocaleTimeString()}</div>
+                <div>{datetime.toLocaleDateString()}</div>
+            </div>
+        );
+    }
     return (
-        <article className="message is-primary">
-            <div className="message-header">
-                <p>Last reload happened at</p>
+        <section className="hero is-medium is-link">
+            <div className="hero-body">
+                <p className="title">
+                    {getDateTime()}
+                </p>
+                <p className="subtitle has-text-dark">
+                    Last loaded
+                </p>
             </div>
-            <div className="message-body">
-                <strong>{new Date().toLocaleString()}</strong>
-            </div>
-        </article>
+        </section>
     );
 }
 
