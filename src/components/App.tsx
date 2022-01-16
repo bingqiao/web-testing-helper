@@ -10,7 +10,7 @@ function App() {
         );
     }
     return (
-        <section className="hero is-medium is-link">
+        <section className="hero is-large is-link">
             <div className="hero-body">
                 <p className="title">
                     {getDateTime()}
