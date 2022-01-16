@@ -1,10 +1,12 @@
 import React from 'react';
+import './App.sass';
+
 function App() {
     const getDateTime = () => {
         const datetime = new Date();
         return (
             <div>
-                <div>{datetime.toLocaleTimeString()}</div>
+                <div className='is-size-1 timestamp'>{datetime.toLocaleTimeString()}</div>
                 <div>{datetime.toLocaleDateString()}</div>
             </div>
         );
